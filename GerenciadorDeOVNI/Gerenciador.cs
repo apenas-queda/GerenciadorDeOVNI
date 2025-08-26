@@ -23,16 +23,24 @@ namespace GerenciadorDeOVNI
             // Atualizar as informações:
             AtualizarInformacoes();
         }
-       
+
 
         public void AtualizarInformacoes()
         {
             lblTripulantes.Text = $"Tripulantes: {ovni.QtdTripulantes}";
             lblAbduzidos.Text = $"Abduzidos: {ovni.QtdAbduzidos}";
             lblSituacao.Text = $"Situação: {(ovni.Situacao ? "Ligado" : "desligado")}";
+            lblPlanetaAtual.Text = $"Planeta atual{ovni.PlanetaAtual}";
+            cmbPlanetas.Text = ovni.PlanetaAtual;
             // Atualizar os botões ligar e desligar:
             btnDesligar.Enabled = ovni.Situacao;
             btnLigar.Enabled = !ovni.Situacao;
+
+            // Ativar/Desativar o grb de acordo com o status da nave:
+            grbAbduzidos.Enabled = ovni.Situacao;
+            grbPlaneta.Enabled = ovni.Situacao;
+            grbTripulantes.Enabled = ovni.Situacao;
+
         }
 
         private void btnLigar_Click(object sender, EventArgs e)
@@ -70,6 +78,26 @@ namespace GerenciadorDeOVNI
             // Atualizar as informações:
             AtualizarInformacoes();
         }
+
+        private void btnAdicionarTripulantes_Click(object sender, EventArgs e)
+        {
+            if (ovni.AdicionarTripulante())
+            {
+
+                MessageBox.Show("Tripulante adicionado!",
+                    "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(" A nave ja está lotada de tripulantes!",
+                       "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            // Atualizar as informações:
+            AtualizarInformacoes();
+
+        }
+
     }
-    
 }
+    
+

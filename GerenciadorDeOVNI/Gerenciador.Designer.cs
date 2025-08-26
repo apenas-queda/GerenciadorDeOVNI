@@ -45,6 +45,7 @@
             this.btnMudarPlaneta = new System.Windows.Forms.Button();
             this.btnRetonarPlaneta = new System.Windows.Forms.Button();
             this.ptb = new System.Windows.Forms.PictureBox();
+            this.lblPlanetaAtual = new System.Windows.Forms.Label();
             this.grbInfomacoes.SuspendLayout();
             this.grbTripulantes.SuspendLayout();
             this.grbAbduzidos.SuspendLayout();
@@ -54,6 +55,7 @@
             // 
             // grbInfomacoes
             // 
+            this.grbInfomacoes.Controls.Add(this.lblPlanetaAtual);
             this.grbInfomacoes.Controls.Add(this.btnDesligar);
             this.grbInfomacoes.Controls.Add(this.btnLigar);
             this.grbInfomacoes.Controls.Add(this.lblAbduzidos);
@@ -132,6 +134,7 @@
             this.btnAdicionarTripulantes.TabIndex = 0;
             this.btnAdicionarTripulantes.Text = "Adicionar";
             this.btnAdicionarTripulantes.UseVisualStyleBackColor = true;
+            this.btnAdicionarTripulantes.Click += new System.EventHandler(this.btnAdicionarTripulantes_Click);
             // 
             // btnRemoverTripulantes
             // 
@@ -213,12 +216,21 @@
             // ptb
             // 
             this.ptb.Image = global::GerenciadorDeOVNI.Properties.Resources.Goodstuff_No_Nonsense_Free_Space_Alien_obduction_1024__1_;
-            this.ptb.Location = new System.Drawing.Point(610, 34);
+            this.ptb.Location = new System.Drawing.Point(610, 60);
             this.ptb.Name = "ptb";
-            this.ptb.Size = new System.Drawing.Size(284, 356);
+            this.ptb.Size = new System.Drawing.Size(284, 378);
             this.ptb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptb.TabIndex = 4;
             this.ptb.TabStop = false;
+            // 
+            // lblPlanetaAtual
+            // 
+            this.lblPlanetaAtual.AutoSize = true;
+            this.lblPlanetaAtual.Location = new System.Drawing.Point(6, 100);
+            this.lblPlanetaAtual.Name = "lblPlanetaAtual";
+            this.lblPlanetaAtual.Size = new System.Drawing.Size(73, 13);
+            this.lblPlanetaAtual.TabIndex = 5;
+            this.lblPlanetaAtual.Text = "Planeta Atual:";
             // 
             // Gerenciador
             // 
@@ -265,5 +277,6 @@
         private System.Windows.Forms.Button btnMudarPlaneta;
         private System.Windows.Forms.ComboBox cmbPlanetas;
         private System.Windows.Forms.PictureBox ptb;
+        private System.Windows.Forms.Label lblPlanetaAtual;
     }
 }
