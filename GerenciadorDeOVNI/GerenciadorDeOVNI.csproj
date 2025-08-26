@@ -110,5 +110,20 @@
   <ItemGroup>
     <None Include="Resources\Goodstuff-No-Nonsense-Free-Space-Alien-obduction.1024 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Planeta terra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kripton.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Miller.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pandora.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gallifrey.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

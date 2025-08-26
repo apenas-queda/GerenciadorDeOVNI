@@ -73,9 +73,59 @@ namespace GerenciadorDeOVNI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gallifrey {
+            get {
+                object obj = ResourceManager.GetObject("Gallifrey", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Goodstuff_No_Nonsense_Free_Space_Alien_obduction_1024__1_ {
             get {
                 object obj = ResourceManager.GetObject("Goodstuff-No-Nonsense-Free-Space-Alien-obduction.1024 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Kripton {
+            get {
+                object obj = ResourceManager.GetObject("Kripton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Miller {
+            get {
+                object obj = ResourceManager.GetObject("Miller", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pandora {
+            get {
+                object obj = ResourceManager.GetObject("Pandora", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Planeta_terra {
+            get {
+                object obj = ResourceManager.GetObject("Planeta terra", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

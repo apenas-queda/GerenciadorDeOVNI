@@ -40,6 +40,26 @@ namespace GerenciadorDeOVNI
             grbAbduzidos.Enabled = ovni.Situacao;
             grbPlaneta.Enabled = ovni.Situacao;
             grbTripulantes.Enabled = ovni.Situacao;
+            if (ovni.PlanetaAtual == "Terra")
+            { ptbTerra.Visible = true; }
+            else 
+            { ptbTerra.Visible = false; }
+            if (ovni.PlanetaAtual == "Krypton")
+            { ptbKrypton.Visible = true; }
+            else
+            { ptbKrypton.Visible = false; }
+            if(ovni.PlanetaAtual == "Gallifrey")
+            { ptbGallifrey.Visible = true; }
+            else
+            { ptbGallifrey .Visible = false; }
+            if (ovni.PlanetaAtual == "Pandora")
+            { ptbPandora.Visible = true; }
+            else
+            { ptbPandora.Visible = false; }
+            if (ovni.PlanetaAtual == "Miller")
+            { ptbMiller.Visible = true; }
+            else
+            { ptbMiller.Visible = false; }
 
         }
 
@@ -58,8 +78,13 @@ namespace GerenciadorDeOVNI
             }
             // Atualizar as informações:
             AtualizarInformacoes();
+            
+            
+            
+            
             // Popular o combobox com os planetas validos:
             cmbPlanetas.Items.AddRange(BibliotecaOVNI.OVNI.PlanetasValidos);
+           
         }
 
         private void btnDesligar_Click(object sender, EventArgs e)
@@ -97,6 +122,97 @@ namespace GerenciadorDeOVNI
 
         }
 
+        private void btnRemoverTripulantes_Click(object sender, EventArgs e)
+        {
+            if (ovni.RemoverTripulante())
+            {
+
+                MessageBox.Show("Tripulante Removido!",
+                    "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(" A nave está com falta de tripulantes!",
+                       "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            // Atualizar as informações:
+            AtualizarInformacoes();
+
+
+        }
+
+        private void btnAdicionarAbduzidos_Click(object sender, EventArgs e)
+        {
+            if (ovni.Abduzir())
+            {
+
+                MessageBox.Show("Abduzido com sucesso!",
+                    "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(" A nave está lotada de abduzidos!",
+                       "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            // Atualizar as informações:
+            AtualizarInformacoes();
+        }
+
+        private void btnRomoverAbduzidos_Click(object sender, EventArgs e)
+        {
+            if (ovni.Desabduzir())
+            {
+
+                MessageBox.Show("Devolvido com sucesso!",
+                    "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(" A nave está vazia de abduzidos!",
+                       "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            // Atualizar as informações:
+            AtualizarInformacoes();
+        }
+
+        private void btnMudarPlaneta_Click(object sender, EventArgs e)
+        {
+
+            if (ovni.MudarPlaneta(cmbPlanetas.Text))
+            {
+
+                MessageBox.Show("Viagem feita com sucesso!",
+                    "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            
+
+            }
+            else
+            {
+                MessageBox.Show(" A nave já está no planeta!",
+                       "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            // Atualizar as informações:
+            AtualizarInformacoes();
+            
+        }
+
+        private void btnRetonarPlaneta_Click(object sender, EventArgs e)
+        {
+            if (ovni.RetornarAoPlanetaDeOrigem())
+            {
+
+                MessageBox.Show("Retorno com sucesso!",
+                    "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(" A nave já está no planeta!",
+                       "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            // Atualizar as informações:
+            AtualizarInformacoes();
+        }
     }
 }
     
